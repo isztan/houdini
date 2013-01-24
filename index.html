@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Houdini - A simple collapse-and-expand widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <!-- HTML5 Shim for IE -->
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<section style="margin-bottom: 51px;">
+	    <article class="container">
+	        <h1><i class="icon-logo"></i> Houdini</h1>
+	        <p class="text-big text-center">A simple collapse-and-expand widget.</p>
+
+    	        <p class="text-center">Lightweight and progressively enhanced so that people without JavaScript support can still access your content.</p>
+
+	        <p class="text-center"><a class="btn btn-blue" href="https://cferdinandi.github.com/houdini/"><i class="icon-github"></i> Download on GitHub</a></p>
+
+	        <p class="text-small text-muted text-center">Or keep reading to learn more...</p>
+
+	        <hr>
+
+	        <h2>How It Works</h2>
+
+	        <p>You can use either an <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> element to toggle to the collapse-and-expand.</p>
+
+	        <p class="text-small">A little snippet of jQuery matches the <code>href</code> or <code>data-target</code> value to the ID of the collapsed element. Then, it adds or removes the <code>.active</code> class from the collapsed element.</p>
+
+	        <p class="text-small">CSS shows or hides the content based on the presence of that class.</p>
+
+	        <hr>
+
+
+	        <h2>Example 1</h2>
+
+	        <p>Toggled with a link and collapsed by default.</p>
+
+            <p class="text-small"><a class="collapse-toggle" href="#collapse1">Toggle 1</a></p>
+
+            <div class="collapse text-small" id="collapse1">
+                <p>Now you see me, now you don't.</p>
+            </div>
+
+
+            <h3>The HTML</h3>
+
+            <pre>&lt;a class="collapse-toggle" href="#collapse1"&gt;Toggle 1&lt;/a&gt;
+
+&lt;div class="collapse" id="collapse1"&gt;
+    Now you see me, now you don't.
+&lt;/div&gt;</pre>
+
+            <hr>
+
+
+            <h2>Example 2</h2>
+
+            <p>Toggled with a button and expanded by default.</p>
+
+            <p class="text-small">For <code>&lt;button&gt;</code> elements, use the CSS3 <code>data-target</code> attribute. The use of <code>href</code> with <code>&lt;button&gt;</code> element is not valid HTML.</p>
+
+            <p class="text-small">To show content by default, add the <code>.active</code> class to the collapsed content. </p>
+
+            <p class="text-small"><button class="collapse-toggle" data-target="#collapse2">A button this time</button></p>
+
+            <div class="collapse active text-small" id="collapse2">
+                <p>Viola!</p>
+            </div>
+
+
+            <h3>The HTML</h3>
+
+            <pre>&lt;button class="collapse-toggle" data-target="#collapse2"&gt;A button this time&lt;/button&gt;
+
+&lt;div class="collapse active" id="collapse2"&gt;
+    Viola!
+&lt;/div&gt;</pre>
+
+            
+
+        </article>
+	</section>
+
+	<footer class="bg-gray">
+        <article class="container">
+
+            <p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Licensed under <a href="http://www.wtfpl.net/">WTFPL</a>.</p>
+
+        </article>
+	</footer>
+
+
+    <!-- Javascript -->
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script type='text/javascript' src='script.js'></script>
+
+</body>
+</html>
