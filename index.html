@@ -5,51 +5,65 @@
     <title>Houdini - A simple collapse-and-expand widget</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- stylesheets -->
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="kraken.css" type="text/css" />
 
-    <!-- HTML5 Shim for IE -->
-    <!--[if IE]>
+    <!-- HTML5 Shim for IE 6-8 -->
+    <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png">
+
+    <!-- MS Homescreen Icons -->
+    <meta name="msapplication-TileColor" content="#0088cc">
+    <meta name="msapplication-TileImage" content="img/ms-touch-icon.png">
 </head>
 
 <body>
-	<section style="margin-bottom: 51px;">
+	<section class="space-bottom bg-gray">
+	    <article class="container text-center">
+
+            <h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> Houdini</h1>
+            <p class="text-tall text-muted">A simple collapse-and-expand widget.</p>
+
+	        <p><a class="btn btn-blue btn-large" href="https://github.com/cferdinandi/houdini"><i class="icon-github"></i> Download on GitHub</a></p>
+
+	        <p class="text-muted">Or keep reading to learn more...</p>
+
+        </article>
+    </section>
+
+	<section class="space-bottom">
 	    <article class="container">
-	        <h1><i class="icon-logo"></i> Houdini</h1>
-	        <p class="text-big text-center">A simple collapse-and-expand widget.</p>
 
-    	        <p class="text-center">Lightweight and progressively enhanced so that people without JavaScript support can still access your content.</p>
 
-	        <p class="text-center"><a class="btn btn-blue" href="https://github.com/cferdinandi/houdini"><i class="icon-github"></i> Download on GitHub</a></p>
-
-	        <p class="text-small text-muted text-center">Or keep reading to learn more...</p>
-
-	        <hr>
-
-	        <h2>How It Works</h2>
+	        <h1 class="text-center">How It Works</h1>
 
 	        <p>You can use either an <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> element to toggle to the collapsed content.</p>
 
-	        <p class="text-small">A little snippet of jQuery matches the <code>href</code> or <code>data-target</code> value to the ID of the collapsed element. Then, it adds or removes the <code>.active</code> class from the collapsed element.</p>
+	        <p>A little snippet of jQuery matches the <code>href</code> or <code>data-target</code> value to the ID of the collapsed element. Then, it adds or removes the <code>.active</code> class from the collapsed element.</p>
 
-	        <p class="text-small">CSS shows or hides the content based on the presence of that class.</p>
+	        <p>CSS shows or hides the content based on the presence of that class.</p>
 
 	        <hr>
 
 
-	        <h2>Example 1</h2>
+	        <h1 class="text-center">Example 1</h1>
 
 	        <p>Toggled with a link and collapsed by default.</p>
 
-            <p class="text-small"><a class="collapse-toggle" href="#collapse1">Toggle 1</a></p>
+            <p><a class="collapse-toggle" href="#collapse1">Toggle 1</a></p>
 
             <div class="collapse text-small" id="collapse1">
                 <p>Now you see me, now you don't.</p>
             </div>
-
-
-            <h3>The HTML</h3>
 
             <pre>&lt;a class="collapse-toggle" href="#collapse1"&gt;Toggle 1&lt;/a&gt;
 
@@ -60,22 +74,19 @@
             <hr>
 
 
-            <h2>Example 2</h2>
+            <h1 class="text-center">Example 2</h1>
 
             <p>Toggled with a button and expanded by default.</p>
 
-            <p class="text-small">For <code>&lt;button&gt;</code> elements, use the CSS3 <code>data-target</code> attribute. The use of <code>href</code> with <code>&lt;button&gt;</code> element is not valid HTML.</p>
+            <p>For <code>&lt;button&gt;</code> elements, use the CSS3 <code>data-target</code> attribute. The use of <code>href</code> with <code>&lt;button&gt;</code> element is not valid HTML.</p>
 
-            <p class="text-small">To show content by default, add the <code>.active</code> class to the collapsed content. </p>
+            <p>To show content by default, add the <code>.active</code> class to the collapsed content. </p>
 
-            <p class="text-small"><button class="btn btn-small collapse-toggle" data-target="#collapse2">A button this time</button></p>
+            <p><button class="btn btn-small collapse-toggle" data-target="#collapse2">A button this time</button></p>
 
             <div class="collapse active text-small" id="collapse2">
                 <p>Viola!</p>
             </div>
-
-
-            <h3>The HTML</h3>
 
             <pre>&lt;button class="collapse-toggle" data-target="#collapse2"&gt;A button this time&lt;/button&gt;
 
@@ -86,25 +97,18 @@
             <hr>
 
 
-            <h2>Progressively Enhanced</h2>
+            <h1 class="text-center">Progressively Enhanced</h1>
             
             <p>By default, collapse-and-expand toggles are hidden and all collapsed content is visible.</p>
 
-            <p class="text-small">Houdini includes the <a href="http://cferdinandi.github.com/js-accessibility/">JS Accessibility snippet</a>, which adds a <code>.js</code> class to the <code>&lt;body&gt;</code> on page load. This activates Houdini, showing the toggles and hiding collapsed content.</p>
+            <p>Houdini includes the <a href="http://cferdinandi.github.com/js-accessibility/">JS Accessibility snippet</a>, which adds a <code>.js</code> class to the <code>&lt;body&gt;</code> on page load. This activates Houdini, showing the toggles and hiding collapsed content.</p>
 
             <hr>
             
 
-            <h2>Requires jQuery</h2>
+            <h1 class="text-center">Requires jQuery</h1>
 
             <p>Houdini requires <a href="http://jquery.com/">jQuery</a>.</p>
-
-            <p class="text-small">Obviously, you need to include <code>houdini.js</code>, too.</p>
-
-            <pre>&lt;script src="http://code.jquery.com/jquery-1.9.0.min.js"&gt;&lt;/script&gt;
-&lt;script src="tabby.js"&gt;&lt;/script&gt;</pre>
-
-            
 
         </article>
 	</section>
@@ -120,7 +124,7 @@
 
     <!-- Javascript -->
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-    <script type='text/javascript' src='scripts.js'></script>
+    <script type='text/javascript' src='js/kraken.js'></script>
 
 </body>
 </html>
