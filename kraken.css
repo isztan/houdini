@@ -697,15 +697,17 @@ select:focus {
 .js .collapse {
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: all 0.35s ease;
-       -moz-transition: all 0.35s ease;
-        -ms-transition: all 0.35s ease;
-         -o-transition: all 0.35s ease;
-            transition: all 0.35s ease;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s ease;
+       -moz-transition: opacity 0.35s ease;
+        -ms-transition: opacity 0.35s ease;
+         -o-transition: opacity 0.35s ease;
+            transition: opacity 0.35s ease;
 }
 
 .js .collapse.active {
-    max-height: 9999px;
+    max-height: 9999em;
+    opacity: 1;
 }
 
 
