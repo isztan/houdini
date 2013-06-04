@@ -41,7 +41,7 @@
 
 	        <p>You can use either an <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> element to toggle to the collapsed content.</p>
 
-	        <p>A little snippet of jQuery matches the <code>href</code> or <code>data-target</code> value to the ID of the collapsed element. Then, it adds or removes the <code>.active</code> class from the collapsed element.</p>
+	        <p>A little snippet of jQuery matches the <code>data-target</code> value to the ID of the collapsed element. Then, it adds or removes an <code>.active</code> class from the collapsed element.</p>
 
 	        <p>CSS shows or hides the content based on the presence of that class.</p>
 
@@ -52,13 +52,13 @@
 
 	        <p>Toggled with a link and collapsed by default.</p>
 
-            <p><a class="collapse-toggle" href="#collapse1">Toggle 1</a></p>
+            <p><a class="collapse-toggle" data-target="#collapse1" href="#">Toggle 1</a></p>
 
             <div class="collapse text-small" id="collapse1">
                 <p>Now you see me, now you don't.</p>
             </div>
 
-            <pre>&lt;a class="collapse-toggle" href="#collapse1"&gt;Toggle 1&lt;/a&gt;
+            <pre>&lt;a class="collapse-toggle" data-target="#collapse1" href="#"&gt;Toggle 1&lt;/a&gt;
 
 &lt;div class="collapse" id="collapse1"&gt;
     Now you see me, now you don't.
