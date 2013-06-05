@@ -39,26 +39,17 @@
 
 	        <h1 class="text-center" id="more">How It Works</h1>
 
-	        <p>You can use either an <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> element to toggle to the collapsed content.</p>
+            <p>Hide content with the <code>.collapse</code> class.</p>
 
-	        <p>A little snippet of jQuery matches the <code>data-target</code> value to the ID of the collapsed element. Then, it adds or removes an <code>.active</code> class from the collapsed element.</p>
+            <p>Use any <code>&lt;a&gt;</code> or a <code>&lt;button&gt;</code> element to show and hide collapsed content by adding the <code>.collapse-toggle</code> class. You also need to include a <code>data-target</code> attribute that matches the ID of the collapsed content.</p>
 
-	        <p>CSS shows or hides the content based on the presence of that class.</p>
+            <p><a class="collapse-toggle" data-target="#show-me" href="#">Click to Show</a></p>
 
-	        <hr>
-
-
-	        <h1 class="text-center">Example 1</h1>
-
-	        <p>Toggled with a link and collapsed by default.</p>
-
-            <p><a class="collapse-toggle" data-target="#collapse1" href="#">Toggle 1</a></p>
-
-            <div class="collapse text-small" id="collapse1">
+            <div class="collapse text-small" id="show-me">
                 <p>Now you see me, now you don't.</p>
             </div>
 
-            <pre>&lt;a class="collapse-toggle" data-target="#collapse1" href="#"&gt;Toggle 1&lt;/a&gt;
+            <pre>&lt;a class="collapse-toggle" data-target="#collapse1" href="#"&gt;Click to Show&lt;/a&gt;
 
 &lt;div class="collapse" id="collapse1"&gt;
     Now you see me, now you don't.
@@ -67,24 +58,20 @@
             <hr>
 
 
-            <h1 class="text-center">Example 2</h1>
+            <h1 class="text-center">Show Content</h1>
 
-            <p>Toggled with a button and expanded by default.</p>
+            <p>If you'd prefer to show content by default, include the <code>.active</code> class along with the <code>.collapse</code> class.</p>
 
-            <p>For <code>&lt;button&gt;</code> elements, use the CSS3 <code>data-target</code> attribute. The use of <code>href</code> with <code>&lt;button&gt;</code> element is not valid HTML.</p>
+            <p><button class="btn btn-small collapse-toggle" data-target="#hide-me">Click to Hide</button></p>
 
-            <p>To show content by default, add the <code>.active</code> class to the collapsed content. </p>
-
-            <p><button class="btn btn-small collapse-toggle" data-target="#collapse2">A button this time</button></p>
-
-            <div class="collapse active text-small" id="collapse2">
-                <p>Viola!</p>
+            <div class="collapse active text-small" id="hide-me">
+                <p>Hide me!</p>
             </div>
 
-            <pre>&lt;button class="collapse-toggle" data-target="#collapse2"&gt;A button this time&lt;/button&gt;
+            <pre>&lt;button class="collapse-toggle" data-target="#hide-me"&gt;Click to Hide&lt;/button&gt;
 
-&lt;div class="collapse active" id="collapse2"&gt;
-    Viola!
+&lt;div class="collapse active" id="hide-me"&gt;
+    Hide me!
 &lt;/div&gt;</pre>
 
             <hr>
@@ -92,16 +79,19 @@
 
             <h1 class="text-center">Progressively Enhanced</h1>
             
-            <p>By default, collapse-and-expand toggles are hidden and all collapsed content is visible.</p>
+            <p>By default, <code>.collapse-toggle</code> elements are hidden and <code>.collapse</code> elements are visible.</p>
 
-            <p>Houdini includes the <a href="http://cferdinandi.github.com/js-accessibility/">JS Accessibility snippet</a>, which adds a <code>.js</code> class to the <code>&lt;body&gt;</code> on page load. This activates Houdini, showing the toggles and hiding collapsed content.</p>
+            <p>Houdini includes a script that checks for JavaScript support by adding a <code>.js</code> class to the <code>&lt;body&gt;</code> on page load. This activates Houdini, showing the toggles and hiding collapsed content.</p>
+
+            <p>That way, people without JavaScript support still have access to the content.</p>
 
             <hr>
             
 
-            <h1 class="text-center">Requires jQuery</h1>
+            <h1 class="text-center">Browser Support</h1>
 
-            <p>Houdini requires <a href="http://jquery.com/">jQuery</a>.</p>
+            <p>Houdini requires <a href="http://jquery.com/">jQuery</a>. It works in all modern browsers and IE 6 and above.</p>
+
 
         </article>
 	</section>
