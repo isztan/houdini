@@ -1,8 +1,44 @@
 # Houdini
 Houdini is a lightweight and progressively enhanced expand-and-collapse widget.
 
-## How It Works
-Getting started with Houdini is really easy. [View the online tutorial](http://cferdinandi.github.com/houdini/) or dig through the `index.html` file.
+
+## How to use Houdini
+
+### 1. Include Houdini on your site.
+
+    <link rel="stylesheet" href="houdini.css">
+    <script src="houdini.js"></script>
+
+### 2. Add the markup to your HTML.
+
+    <div class="collapse" id="show-me">
+        <p>Now you see me, now you don't.</p>
+    </div>
+
+    <a class="collapse-toggle" data-target="#show-me" href="#">
+        <span class="collapse-text-show">Show +</span>
+        <span class="collapse-text-hide">Hide -</span>
+    </a>
+
+If you'd prefer to show content by default, include the .active class along with the .collapse and .collapse-toggle classes.
+
+    <button class="collapse-toggle active" data-target="#hide-me">
+        <span class="collapse-text-show">Show</span>
+        <span class="collapse-text-hide">Hide</span>
+    </button>
+
+    <div class="collapse active" id="hide-me">
+        <p>Hide me!</p>
+    </div>
+
+### 3. Pat yourself on the back.
+
+Seriously, you're done. Nice work! Modify as needed.
+
+
+## Browser Support
+
+Houdini works in all modern browsers, and IE 8 and above.
 
 ## Changelog
 * v2.2 (August 5, 2013)
