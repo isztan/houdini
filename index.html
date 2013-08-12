@@ -3,9 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <title>Houdini - A simple collapse-and-expand widget</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- stylesheets -->
-    <link rel="stylesheet" href="kraken.css" type="text/css" />
+    <link rel="stylesheet" href="kraken.css" type="text/css">
+
+    <!-- Feature Test -->
+    <script>
+        if ( 'querySelector' in document && 'addEventListener' in window ) {
+            document.documentElement.className += 'js';
+        }
+    </script>
 
     <!-- HTML5 Shim for IE 6-8 -->
     <!--[if lt IE 9]>
@@ -20,7 +28,7 @@
             <h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> Houdini</h1>
             <p class="text-tall text-muted">A simple collapse-and-expand widget.</p>
 
-	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/houdini/archive/master.zip">Download Houdini 2</a></p>
+	        <p><a class="btn btn-blue btn-jumbo" href="https://github.com/cferdinandi/houdini/archive/master.zip">Download Houdini 3</a></p>
 
 	        <p>
 	            <span class="text-small">
@@ -37,22 +45,51 @@
 	    <article class="container">
 
 
-	        <h1 class="text-center" id="more">How It Works</h1>
+	        <h1 class="text-center" id="more">Getting Started</h1>
 
-            <p>Hide content with the <code>.collapse</code> class.</p>
+	        <p>Houdini is a simple expand-and-collapse script powered by vanilla JavaScript.</p>
 
-            <p>Use any <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element to show and hide collapsed content by adding the <code>.collapse-toggle</code> class. You also need to include a <code>data-target</code> attribute that matches the ID of the collapsed content.</p>
+	        <div class="row">
+	            <div class="grid-3">
+	                <p><strong>Example 1:</strong></p>
+                    <div class="collapse" id="show-me">
+                        <p>Now you see me, now you don't.</p>
+                    </div>
 
-            <div class="collapse" id="show-me">
-                <p>Now you see me, now you don't.</p>
-            </div>
+                    <p>
+                        <a class="collapse-toggle" data-target="#show-me" href="#">
+                            <span class="collapse-text-show">Show More +</span>
+                            <span class="collapse-text-hide">Show Less -</span>
+                        </a>
+                    </p>
+	            </div>
+	            <div class="grid-3">
+	                <p><strong>Example 2:</strong></p>
+                    <p>
+                        <button class="btn btn-small collapse-toggle active" data-target="#hide-me">
+                            <span class="collapse-text-show">Show</span>
+                            <span class="collapse-text-hide">Hide</span>
+                        </button>
+                    </p>
 
-            <p>
-                <a class="collapse-toggle" data-target="#show-me" href="#">
-                    <span class="collapse-text-show">Show +</span>
-                    <span class="collapse-text-hide">Hide -</span>
-                </a>
-            </p>
+                    <div class="collapse active" id="hide-me">
+                        <p>Hide me!</p>
+                    </div>
+	            </div>
+	        </div>
+
+            <hr>
+
+
+            <h1 class="text-center">How to use Houdini</h1>
+
+            <h2>1. Include Houdini on your site.</h2>
+
+            <pre>&lt;link rel="stylesheet" href="houdini.css"&gt;
+&lt;script src="houdini.js"&gt;&lt;/script&gt;</pre>
+
+
+            <h2>2. Add the markup to your HTML.</h2>
 
             <pre>&lt;div class="collapse" id="show-me"&gt;
     &lt;p&gt;Now you see me, now you don't.&lt;/p&gt;
@@ -63,23 +100,7 @@
     &lt;span class="collapse-text-hide"&gt;Hide -&lt;/span&gt;
 &lt;/a&gt;</pre>
 
-            <hr>
-
-
-            <h1 class="text-center">Show Content by Default</h1>
-
             <p>If you'd prefer to show content by default, include the <code>.active</code> class along with the <code>.collapse</code> and <code>.collapse-toggle</code> classes.</p>
-
-            <p>
-                <button class="btn btn-small collapse-toggle active" data-target="#hide-me">
-                    <span class="collapse-text-show">Show</span>
-                    <span class="collapse-text-hide">Hide</span>
-                </button>
-            </p>
-
-            <div class="collapse active" id="hide-me">
-                <p>Hide me!</p>
-            </div>
 
             <pre>&lt;button class="collapse-toggle active" data-target="#hide-me"&gt;
     &lt;span class="collapse-text-show"&gt;Show&lt;/span&gt;
@@ -90,23 +111,33 @@
     &lt;p&gt;Hide me!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
-            <hr>
+
+            <h2>3. Add a feature test.</h2>
+
+            <p>Houdini uses modern JavaScript API's that aren't supported by older browsers. Add this short snippet of code in the <code>&lt;head&gt;</code> of your HTML document to feature test:</p>
+
+            <pre>&lt;!-- Feature Test --&gt;
+&lt;script&gt;
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+        document.documentElement.className += 'js';
+    }
+&lt;/script&gt;</pre>
+
+            <p>For browsers that support modern JavaScript API's, this snippet adds a <code>.js</code> class to the <code>&lt;html&gt;</code> element, which activates Houdini, showing the toggles and hiding collapsed content. Older and less capable browsers will see all content by default.</p>
 
 
-            <h1 class="text-center">Progressively Enhanced</h1>
-            
-            <p>By default, <code>.collapse-toggle</code> elements are hidden and <code>.collapse</code> elements are visible.</p>
+            <h2>4. Pat yourself on the back.</h2>
 
-            <p>Houdini includes a script that checks for JavaScript support by adding a <code>.js</code> class to the <code>&lt;body&gt;</code> on page load. This activates Houdini, showing the toggles and hiding collapsed content.</p>
-
-            <p>That way, people without JavaScript support still have access to the content.</p>
+            <p>Seriously, you're done. Nice work! Modify as needed.</p>
 
             <hr>
             
 
             <h1 class="text-center">Browser Support</h1>
 
-            <p>Houdini works in all modern browsers and IE 6 and above. Houdini also requires <a href="http://jquery.com/">jQuery</a>.</p>
+            <p>Houdini works in all modern browsers, including IE 9 and above.</p>
+
+            <p>If you need to support older browsers, you can still download the <a href="https://github.com/cferdinandi/houdini/tree/archive-v2">previous version of Houdini on GitHub</a>.</p>
 
 
         </article>
@@ -124,7 +155,6 @@
 
 
     <!-- Javascript -->
-    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script type='text/javascript' src='js/kraken.js'></script>
 
 </body>
