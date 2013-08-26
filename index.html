@@ -83,13 +83,20 @@
 
             <h1 class="text-center">How to use Houdini</h1>
 
-            <h2>1. Include Houdini on your site.</h2>
+            <h2>1. Include Buoy on your site.</h2>
+
+            <pre><code class="language-markup">&lt;script src="buoy.js"&gt;&lt;/script&gt;</code></pre>
+
+            <p><a href="http://cferdinandi.github.io/buoy/">Buoy</a> is a vanilla JS micro-library that contains simple helper functions used by Houdini. Make sure to include it <em>before</em> Houdini.</p>
+            
+
+            <h2>2. Include Houdini on your site.</h2>
 
             <pre><code class="language-markup">&lt;link rel="stylesheet" href="houdini.css"&gt;
 &lt;script src="houdini.js"&gt;&lt;/script&gt;</code></pre>
 
 
-            <h2>2. Add the markup to your HTML.</h2>
+            <h2>3. Add the markup to your HTML.</h2>
 
             <pre><code class="language-markup">&lt;div class="collapse" id="show-me"&gt;
     &lt;p&gt;Now you see me, now you don't.&lt;/p&gt;
@@ -112,7 +119,7 @@
 &lt;/div&gt;</code></pre>
 
 
-            <h2>3. Add a feature test.</h2>
+            <h2>4. Add a feature test.</h2>
 
             <p>Houdini uses modern JavaScript API's that aren't supported by older browsers. Add this short snippet of code in the <code>&lt;head&gt;</code> of your HTML document to feature test:</p>
 
@@ -126,7 +133,7 @@
             <p>For browsers that support modern JavaScript API's, this snippet adds a <code>.js</code> class to the <code>&lt;html&gt;</code> element, which activates Houdini, showing the toggles and hiding collapsed content. Older and less capable browsers will see all content by default.</p>
 
 
-            <h2>4. Pat yourself on the back.</h2>
+            <h2>5. Pat yourself on the back.</h2>
 
             <p>Seriously, you're done. Nice work! Modify as needed.</p>
 
