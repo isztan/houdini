@@ -78,7 +78,7 @@ window.buoy = (function(){
 
 /* =============================================================
 
-    Houdini v3.3
+    Houdini v3.4
     A simple collapse and expand widget by Chris Ferdinandi.
     http://gomakethings.com
 
@@ -95,15 +95,15 @@ window.buoy = (function(){
         // Function to toggle collapse/expand widget
         var toggleCollapse = function (toggle) {
 
-                // Define the content container
-                var dataID = toggle.getAttribute('data-target');
-                var dataTarget = document.querySelector(dataID);
+            // Define the content container
+            var dataID = toggle.getAttribute('data-target');
+            var dataTarget = document.querySelector(dataID);
 
-                // Toggle the '.active' class on the toggle and container elements
-                buoy.toggleClass(toggle, 'active');
-                buoy.toggleClass(dataTarget, 'active');
+            // Toggle the '.active' class on the toggle and container elements
+            buoy.toggleClass(toggle, 'active');
+            buoy.toggleClass(dataTarget, 'active');
 
-        }
+        };
 
         // Define collapse toggle
         var collapseToggle = document.querySelectorAll('.collapse-toggle');
